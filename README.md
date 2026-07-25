@@ -1,67 +1,143 @@
 # 🚚 Fleet Management System
 
-![Fleet Management System](https://i.postimg.cc/TYxSGDzV/Gemini-Generated-Image-sss40sss40sss40s.png)
+<p align="center">
+  <img src="https://i.postimg.cc/TYxSGDzV/Gemini-Generated-Image-sss40sss40sss40s.png" width="500"/>
+</p>
 
-Sistema web completo para gerenciamento de frotas, desenvolvido para controlar veículos, motoristas, contratos, manutenções e operações relacionadas à gestão de uma frota.
+<h3 align="center">
+Sistema web completo para gerenciamento e controle de frotas
+</h3>
 
-🔗 **Demo online:**  
-https://nataliapastre-dev.github.io/fleet-management-system/
-
----
-
-## 📌 Sobre o Projeto
-
-O **Fleet Management System** foi desenvolvido como projeto Full Stack com o objetivo de criar uma solução para controle e organização de frotas.
-
-A aplicação permite centralizar informações de veículos, acompanhar manutenções, controlar motoristas e contratos, além de disponibilizar um dashboard com indicadores da operação.
+<p align="center">
+🔗 <a href="https://nataliapastre-dev.github.io/fleet-management-system/">Acessar aplicação online</a>
+</p>
 
 ---
 
-## 🚀 Funcionalidades
+# 📌 Sobre o Projeto
 
-### 📊 Dashboard
-- Visão geral da frota
-- Total de veículos cadastrados
-- Status dos veículos
-- Ordens de serviço abertas
-- Custos de manutenção
-- Gráficos e indicadores
+O **Fleet Management System (FMS)** é uma aplicação web desenvolvida para gerenciamento de frotas corporativas, com foco em organização, controle operacional e visualização de informações estratégicas.
 
-### 🚗 Gestão de Veículos
-- Cadastro de veículos
-- Edição de informações
-- Controle de:
-  - Marca
-  - Modelo
-  - Placa
-  - Ano
-  - Chassi
-  - RENAVAM
-  - Quilometragem
-  - Combustível
-  - Status
+O projeto simula uma plataforma utilizada por empresas que precisam controlar seus veículos, motoristas, manutenções e processos relacionados à operação de uma frota.
 
-### 👨‍✈️ Gestão de Motoristas
-- Cadastro de motoristas
-- Associação de motoristas aos veículos
-- Controle de informações dos condutores
+A aplicação foi criada com arquitetura **Full Stack**, separando o front-end e back-end, permitindo uma estrutura escalável e organizada.
 
-### 📄 Ordens de Serviço
-- Cadastro de serviços
-- Controle de manutenção
-- Registro de custos
-- Impressão de ordem de serviço em PDF
+Todos os dados apresentados no sistema, incluindo:
 
-### 🔧 Manutenções
-- Histórico de manutenções
-- Tipos de serviços realizados
-- Controle de peças
-- Controle de mão de obra
-- Cálculo de custos
+- 🚗 veículos cadastrados;
+- 👨‍✈️ motoristas cadastrados;
+- 📄 contratos;
+- 🔧 registros de manutenção;
 
-### 📑 Contratos
-- Cadastro e gerenciamento de contratos
-- Controle de informações contratuais
+são **dados fictícios criados exclusivamente para demonstração do funcionamento da aplicação**.
+
+---
+
+# 🎯 Objetivo do Projeto
+
+O objetivo foi desenvolver uma solução semelhante aos sistemas utilizados no mercado para gestão de frotas, aplicando conceitos de:
+
+- Desenvolvimento Front-end;
+- Desenvolvimento Back-end;
+- Consumo de APIs REST;
+- Banco de dados;
+- Autenticação;
+- Dashboard com indicadores;
+- Organização de processos empresariais.
+
+---
+
+# 🚀 Funcionalidades
+
+## 📊 Dashboard
+
+Painel principal com visão geral da operação:
+
+- Quantidade total de veículos;
+- Status da frota;
+- Veículos disponíveis;
+- Veículos em manutenção;
+- Ordens de serviço abertas;
+- Custos de manutenção;
+- Gráficos e indicadores.
+
+---
+
+## 🚗 Gestão de Veículos
+
+Módulo responsável pelo controle dos veículos da frota.
+
+Funcionalidades:
+
+- Cadastro de veículos;
+- Edição de informações;
+- Controle de status;
+- Informações técnicas:
+
+  - Marca;
+  - Modelo;
+  - Placa;
+  - Ano;
+  - Chassi;
+  - RENAVAM;
+  - Quilometragem;
+  - Combustível;
+  - Câmbio;
+  - Categoria.
+
+---
+
+## 👨‍✈️ Gestão de Motoristas
+
+Controle dos condutores vinculados à frota.
+
+Funcionalidades:
+
+- Cadastro de motoristas;
+- Associação de motoristas aos veículos;
+- Organização das informações dos condutores.
+
+*(Todos os motoristas cadastrados são fictícios.)*
+
+---
+
+## 📄 Ordens de Serviço
+
+Módulo para controle das solicitações de manutenção.
+
+Possui:
+
+- Cadastro de serviços;
+- Tipo de manutenção;
+- Peças utilizadas;
+- Valor de mão de obra;
+- Controle de custos;
+- Geração de PDF.
+
+---
+
+## 🔧 Controle de Manutenções
+
+Permite acompanhar o histórico de serviços realizados.
+
+Funcionalidades:
+
+- Registro de manutenções;
+- Histórico por veículo;
+- Controle financeiro;
+- Acompanhamento operacional.
+
+---
+
+## 📑 Gestão de Contratos
+
+Controle de contratos relacionados à frota.
+
+Funcionalidades:
+
+- Cadastro;
+- Edição;
+- Organização das informações contratuais.
 
 ---
 
@@ -96,22 +172,22 @@ A aplicação permite centralizar informações de veículos, acompanhar manuten
 
 ---
 
-# 📂 Estrutura do Projeto
+# 🏗️ Arquitetura do Projeto
 
 ```
 fleet-management-system
 │
 ├── frontend
-│   ├── src
-│   ├── pages
-│   ├── components
-│   └── services
+│   ├── React
+│   ├── Pages
+│   ├── Components
+│   └── Services
 │
 ├── backend
-│   ├── controllers
-│   ├── routes
-│   ├── database
-│   └── server.js
+│   ├── Routes
+│   ├── Controllers
+│   ├── Database
+│   └── Server
 │
 └── README.md
 ```
@@ -120,34 +196,17 @@ fleet-management-system
 
 # ⚙️ Como Executar Localmente
 
-## Pré-requisitos
-
-- Node.js instalado
-- npm instalado
-
----
-
 ## Backend
-
-Entre na pasta:
 
 ```bash
 cd backend
-```
 
-Instale as dependências:
-
-```bash
 npm install
-```
 
-Execute:
-
-```bash
 npm run dev
 ```
 
-O servidor será iniciado em:
+Servidor:
 
 ```
 http://localhost:3333
@@ -155,27 +214,17 @@ http://localhost:3333
 
 ---
 
-## Frontend
-
-Entre na pasta:
+## Front-end
 
 ```bash
 cd frontend
-```
 
-Instale as dependências:
-
-```bash
 npm install
-```
 
-Execute:
-
-```bash
 npm run dev
 ```
 
-Aplicação disponível em:
+Aplicação:
 
 ```
 http://localhost:5173
@@ -187,28 +236,28 @@ http://localhost:5173
 
 O sistema possui autenticação utilizando:
 
-- JWT
-- Controle de acesso através de token
-- Rotas protegidas
+- JWT;
+- Tokens de acesso;
+- Controle de rotas protegidas.
 
 ---
 
-# 📈 Próximas Melhorias
+# 📈 Melhorias Futuras
 
-- [ ] Publicação do backend em ambiente cloud
-- [ ] Integração com banco de dados em produção
-- [ ] Relatórios avançados
-- [ ] Exportação de dados
-- [ ] Controle de abastecimentos
-- [ ] Controle de pneus
-- [ ] Controle de multas
-- [ ] Sistema de notificações
+- [ ] Publicação do backend em ambiente cloud;
+- [ ] Banco de dados em produção;
+- [ ] Controle de abastecimentos;
+- [ ] Controle de pneus;
+- [ ] Controle de multas;
+- [ ] Relatórios avançados;
+- [ ] Sistema de alertas;
+- [ ] Exportação de dados.
 
 ---
 
 # 👩‍💻 Desenvolvido por
 
-**Natália Baptista Pastre**
+## Natália Baptista Pastre
 
 🎓 Análise e Desenvolvimento de Sistemas
 
@@ -219,4 +268,4 @@ https://github.com/nataliapastre-dev
 
 ---
 
-⭐ Se este projeto foi útil, deixe uma estrela no repositório!
+⭐ Projeto desenvolvido para estudos, portfólio e demonstração de habilidades em desenvolvimento de aplicações web.
