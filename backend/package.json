@@ -1,0 +1,32 @@
+{
+  "name": "fleet-management-backend",
+  "version": "1.0.0",
+  "description": "API do Fleet Management System",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "fleet-management",
+    "fastify",
+    "nodejs",
+    "sqlite",
+    "api"
+  ],
+  "author": "Natália Baptista Pastre",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^12.11.1",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.10.0",
+    "jsonwebtoken": "^9.0.3",
+    "pdfkit": "^0.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

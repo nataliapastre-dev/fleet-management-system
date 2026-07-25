@@ -1,0 +1,1730 @@
+/* ==========================
+ RESET GLOBAL
+========================== */
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter","Segoe UI",Arial,sans-serif;
+}
+
+
+body {
+
+  background:#f8fafc;
+  color:#1e293b;
+
+}
+
+
+a {
+
+  text-decoration:none;
+
+}
+
+
+button,input,select,textarea {
+
+  font-family:inherit;
+
+}
+
+
+
+/* ==========================
+ LAYOUT
+========================== */
+
+
+.layout {
+
+  display:flex;
+  min-height:100vh;
+
+}
+
+
+
+.content {
+
+  flex:1;
+  margin-left:260px;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+
+}
+
+
+
+/* ==========================
+ SIDEBAR
+========================== */
+
+
+.sidebar {
+
+  position:fixed;
+
+  left:0;
+
+  top:0;
+
+  bottom:0;
+
+  width:260px;
+
+  padding:25px 18px;
+
+  color:white;
+
+  background:
+
+  linear-gradient(
+    180deg,
+    #020617,
+    #1e293b
+  );
+
+  box-shadow:
+  8px 0 25px rgba(0,0,0,.18);
+
+}
+
+
+
+.sidebar h2 {
+
+  text-align:center;
+
+  font-size:30px;
+
+  font-weight:900;
+
+  letter-spacing:1px;
+
+  margin-bottom:40px;
+
+  color:#60a5fa;
+
+}
+
+
+
+.sidebar ul {
+
+  list-style:none;
+
+}
+
+
+
+.sidebar li {
+
+  margin-bottom:8px;
+
+  border-radius:14px;
+
+  transition:.3s;
+
+}
+
+
+
+.sidebar li:hover {
+
+  background:rgba(255,255,255,.10);
+
+  transform:translateX(6px);
+
+}
+
+
+
+.sidebar a {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:14px 16px;
+
+  color:#e2e8f0;
+
+  font-size:15px;
+
+  font-weight:600;
+
+}
+
+
+
+.sidebar svg {
+
+  font-size:20px;
+
+}
+
+
+
+.sidebar a:hover {
+
+  color:white;
+
+}
+
+
+
+/* ==========================
+ HEADER
+========================== */
+
+
+.header {
+
+  height:75px;
+
+  background:white;
+
+  display:flex;
+
+  align-items:center;
+
+  padding:0 35px;
+
+  box-shadow:
+
+  0 5px 20px rgba(0,0,0,.08);
+
+  font-size:20px;
+
+  font-weight:800;
+
+  color:#0f172a;
+
+}
+
+
+
+/* ==========================
+ LOGIN PREMIUM
+========================== */
+
+
+.login-container {
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:
+
+  radial-gradient(
+    circle at top,
+    #3b82f6,
+    #020617
+  );
+
+}
+
+
+
+.login-box {
+
+  width:430px;
+
+  padding:45px;
+
+  background:white;
+
+  border-radius:25px;
+
+  box-shadow:
+
+  0 30px 60px rgba(0,0,0,.30);
+
+  animation:
+
+  loginAnimation .5s ease;
+
+}
+
+
+
+@keyframes loginAnimation {
+
+
+from {
+
+  opacity:0;
+
+  transform:translateY(30px);
+
+}
+
+
+to {
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+
+}
+
+
+
+.login-box h2 {
+
+  text-align:center;
+
+  font-size:34px;
+
+  font-weight:900;
+
+  color:#0f172a;
+
+  margin-bottom:8px;
+
+}
+
+
+
+.login-box p {
+
+  text-align:center;
+
+  color:#64748b;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.login-box label {
+
+  display:block;
+
+  margin-bottom:8px;
+
+  font-weight:700;
+
+  color:#334155;
+
+}
+
+
+
+.login-box input {
+
+
+  width:100%;
+
+  padding:15px;
+
+  border-radius:14px;
+
+  border:
+
+  1px solid #cbd5e1;
+
+  margin-bottom:20px;
+
+  font-size:15px;
+
+  transition:.3s;
+
+}
+
+
+
+.login-box input:focus {
+
+
+  outline:none;
+
+  border-color:#2563eb;
+
+  box-shadow:
+
+  0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+
+
+.login-box button {
+
+
+  width:100%;
+
+  padding:16px;
+
+  border-radius:14px;
+
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  font-weight:800;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+
+
+.login-box button:hover {
+
+
+  background:#1d4ed8;
+
+  transform:
+
+  translateY(-3px);
+
+}
+
+
+
+.login-error {
+
+  background:#fee2e2;
+
+  color:#991b1b;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  text-align:center;
+
+  margin-bottom:20px;
+
+  font-weight:700;
+
+}
+/* ==========================
+ PÁGINAS
+========================== */
+
+
+.dashboard,
+.page-container {
+
+  padding:35px;
+
+}
+
+
+
+.page-header {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.page-header h1 {
+
+  font-size:28px;
+
+  font-weight:800;
+
+  color:#0f172a;
+
+}
+
+
+
+/* ==========================
+ DASHBOARD CARDS
+========================== */
+
+
+.cards {
+
+  display:grid;
+
+  grid-template-columns:
+
+  repeat(3,1fr);
+
+  gap:25px;
+
+  margin-top:25px;
+
+}
+
+
+
+.card {
+
+
+  background:white;
+
+  padding:28px;
+
+  border-radius:22px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+
+  box-shadow:
+
+  0 10px 30px rgba(15,23,42,.08);
+
+  border-left:
+
+  5px solid #2563eb;
+
+  transition:.3s;
+
+}
+
+
+
+.card:hover {
+
+
+  transform:
+
+  translateY(-7px);
+
+
+  box-shadow:
+
+  0 18px 35px rgba(15,23,42,.15);
+
+
+}
+
+
+
+.card svg {
+
+
+  width:60px;
+
+  height:60px;
+
+  padding:15px;
+
+  border-radius:18px;
+
+  background:#dbeafe;
+
+  color:#2563eb;
+
+
+}
+
+
+
+.card h3 {
+
+
+  font-size:14px;
+
+  color:#64748b;
+
+  font-weight:600;
+
+  margin-bottom:8px;
+
+
+}
+
+
+
+.card p {
+
+
+  font-size:32px;
+
+  font-weight:900;
+
+  color:#0f172a;
+
+
+}
+
+
+
+/* CORES DOS CARDS */
+
+
+.card:nth-child(2){
+
+  border-left-color:#16a34a;
+
+}
+
+
+.card:nth-child(2) svg {
+
+  background:#dcfce7;
+
+  color:#16a34a;
+
+}
+
+
+
+.card:nth-child(3){
+
+  border-left-color:#f59e0b;
+
+}
+
+
+
+.card:nth-child(3) svg {
+
+  background:#fef3c7;
+
+  color:#d97706;
+
+}
+
+
+
+.card:nth-child(4){
+
+  border-left-color:#ef4444;
+
+}
+
+
+
+.card:nth-child(4) svg {
+
+  background:#fee2e2;
+
+  color:#dc2626;
+
+}
+
+
+
+.card:nth-child(5){
+
+  border-left-color:#7c3aed;
+
+}
+
+
+
+.card:nth-child(5) svg {
+
+  background:#ede9fe;
+
+  color:#7c3aed;
+
+}
+
+
+
+.card:nth-child(6){
+
+  border-left-color:#ea580c;
+
+}
+
+
+
+.card:nth-child(6) svg {
+
+  background:#ffedd5;
+
+  color:#ea580c;
+
+}
+
+
+
+
+
+/* ==========================
+ DASHBOARD SEÇÕES
+========================== */
+
+
+.dashboard-section {
+
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:22px;
+
+  margin-top:30px;
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,.07);
+
+
+}
+
+
+
+.dashboard-section h2 {
+
+
+  margin-bottom:20px;
+
+  color:#0f172a;
+
+}
+
+
+
+
+
+/* ==========================
+ GRÁFICOS
+========================== */
+
+
+.chart-container {
+
+
+  width:100%;
+
+  height:380px;
+
+
+}
+
+
+
+
+
+/* ==========================
+ FORMULÁRIOS
+========================== */
+
+
+form,
+.form-container {
+
+
+  background:white;
+
+  padding:35px;
+
+  border-radius:22px;
+
+  box-shadow:
+
+  0 10px 30px rgba(0,0,0,.08);
+
+  max-width:950px;
+
+
+}
+
+
+
+.form-group {
+
+
+  margin-bottom:22px;
+
+
+}
+
+
+
+label {
+
+
+  display:block;
+
+  margin-bottom:8px;
+
+  font-weight:700;
+
+  color:#334155;
+
+
+}
+
+
+
+input,
+select,
+textarea {
+
+
+  width:100%;
+
+  padding:14px 16px;
+
+  border-radius:14px;
+
+  border:
+
+  1px solid #cbd5e1;
+
+  font-size:15px;
+
+  background:white;
+
+  transition:.3s;
+
+
+}
+
+
+
+input:hover,
+select:hover,
+textarea:hover {
+
+
+  border-color:#94a3b8;
+
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+
+  outline:none;
+
+  border-color:#2563eb;
+
+  box-shadow:
+
+  0 0 0 4px rgba(37,99,235,.12);
+
+
+}
+
+
+
+textarea {
+
+
+  min-height:130px;
+
+  resize:vertical;
+
+
+}
+
+
+
+.form-actions {
+
+
+  display:flex;
+
+  justify-content:flex-end;
+
+  gap:15px;
+
+  margin-top:25px;
+
+
+}
+
+
+
+
+
+/* ==========================
+ BOTÕES
+========================== */
+
+
+button {
+
+
+  padding:13px 24px;
+
+  border:none;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:.3s;
+
+
+}
+
+
+
+button:hover {
+
+
+  transform:
+
+  translateY(-3px);
+
+
+}
+
+
+
+.btn-primary {
+
+
+  background:#2563eb;
+
+  color:white;
+
+
+}
+
+
+
+.btn-primary:hover {
+
+
+  background:#1d4ed8;
+
+
+}
+
+
+
+.btn-secondary {
+
+
+  background:#64748b;
+
+  color:white;
+
+
+}
+
+
+
+.btn-secondary:hover {
+
+
+  background:#475569;
+
+
+}
+
+
+
+.btn-edit {
+
+
+  background:#2563eb;
+
+  color:white;
+
+  margin-right:8px;
+
+
+}
+
+
+
+.btn-delete {
+
+
+  background:#ef4444;
+
+  color:white;
+
+
+}
+
+
+
+.btn-delete:hover {
+
+
+  background:#dc2626;
+
+
+}
+
+
+
+
+
+/* ==========================
+ TABELAS
+========================== */
+
+
+.table-container {
+
+
+  background:white;
+
+  padding:25px;
+
+  border-radius:22px;
+
+  box-shadow:
+
+  0 10px 30px rgba(0,0,0,.08);
+
+  overflow-x:auto;
+
+
+}
+
+
+
+table {
+
+
+  width:100%;
+
+  border-collapse:collapse;
+
+
+}
+
+
+
+thead {
+
+
+  background:#f8fafc;
+
+
+}
+
+
+
+th {
+
+
+  padding:16px;
+
+  text-align:left;
+
+  color:#475569;
+
+  font-size:14px;
+
+
+}
+
+
+
+td {
+
+
+  padding:16px;
+
+  border-bottom:
+
+  1px solid #e2e8f0;
+
+  color:#334155;
+
+
+}
+
+
+
+tbody tr {
+
+
+  transition:.2s;
+
+
+}
+
+
+
+tbody tr:hover {
+
+
+  background:#f8fafc;
+
+
+}
+/* ==========================
+ CARDS DOS MÓDULOS
+========================== */
+
+
+.vehicle-card,
+.contract-card,
+.maintenance-card,
+.order-card {
+
+
+  background:white;
+
+  padding:28px;
+
+  border-radius:22px;
+
+  margin-bottom:20px;
+
+  box-shadow:
+
+  0 10px 30px rgba(0,0,0,.08);
+
+  transition:.3s;
+
+
+}
+
+
+
+.vehicle-card:hover,
+.contract-card:hover,
+.maintenance-card:hover,
+.order-card:hover {
+
+
+  transform:
+
+  translateY(-5px);
+
+
+  box-shadow:
+
+  0 18px 35px rgba(0,0,0,.12);
+
+
+}
+
+
+
+.vehicle-card h3,
+.contract-card h3,
+.maintenance-card h3,
+.order-card h3 {
+
+
+  color:#0f172a;
+
+  font-size:20px;
+
+  margin-bottom:15px;
+
+
+}
+
+
+
+.vehicle-card p,
+.contract-card p,
+.maintenance-card p,
+.order-card p {
+
+
+  color:#475569;
+
+  margin-bottom:8px;
+
+  font-size:15px;
+
+
+}
+
+
+
+
+
+/* ==========================
+ VEÍCULOS
+========================== */
+
+
+.vehicle-card {
+
+
+  border-left:
+
+  5px solid #2563eb;
+
+
+}
+
+
+
+
+
+/* ==========================
+ CONTRATOS
+========================== */
+
+
+.contract-card {
+
+
+  border-left:
+
+  5px solid #7c3aed;
+
+
+}
+
+
+
+
+
+/* ==========================
+ MANUTENÇÃO
+========================== */
+
+
+.maintenance-card {
+
+
+  border-left:
+
+  5px solid #16a34a;
+
+
+}
+
+
+
+.cost-value {
+
+
+  color:#16a34a;
+
+  font-size:22px;
+
+  font-weight:900;
+
+
+}
+
+
+
+
+
+/* ==========================
+ ORDENS DE SERVIÇO
+========================== */
+
+
+.order-card {
+
+
+  border-left:
+
+  5px solid #f59e0b;
+
+
+}
+
+
+
+.order-card strong {
+
+
+  display:block;
+
+  color:#0f172a;
+
+  margin-bottom:10px;
+
+
+}
+
+
+
+.order-card small {
+
+
+  color:#64748b;
+
+
+}
+
+
+
+
+
+/* ==========================
+ ALERTAS
+========================== */
+
+
+.alert-card {
+
+
+  background:white;
+
+  padding:22px;
+
+  border-radius:18px;
+
+  margin-bottom:18px;
+
+  border-left:
+
+  5px solid #f59e0b;
+
+  box-shadow:
+
+  0 8px 20px rgba(0,0,0,.06);
+
+
+}
+
+
+
+.alert-card strong {
+
+
+  display:block;
+
+  color:#0f172a;
+
+  margin-bottom:8px;
+
+
+}
+
+
+
+.alert-card p {
+
+
+  color:#475569;
+
+
+}
+
+
+
+.alert-card.warning {
+
+
+  border-left-color:#f59e0b;
+
+
+}
+
+
+
+.alert-card.danger {
+
+
+  border-left-color:#ef4444;
+
+
+}
+
+
+
+
+
+/* ==========================
+ STATUS BADGES
+========================== */
+
+
+.status-active,
+.status-completed {
+
+
+  display:inline-block;
+
+  background:#dcfce7;
+
+  color:#166534;
+
+  padding:7px 15px;
+
+  border-radius:30px;
+
+  font-size:13px;
+
+  font-weight:800;
+
+
+}
+
+
+
+.status-inactive,
+.status-danger {
+
+
+  display:inline-block;
+
+  background:#fee2e2;
+
+  color:#991b1b;
+
+  padding:7px 15px;
+
+  border-radius:30px;
+
+  font-size:13px;
+
+  font-weight:800;
+
+
+}
+
+
+
+.status-pending {
+
+
+  display:inline-block;
+
+  background:#fef3c7;
+
+  color:#92400e;
+
+  padding:7px 15px;
+
+  border-radius:30px;
+
+  font-size:13px;
+
+  font-weight:800;
+
+
+}
+
+
+
+
+
+/* ==========================
+ SCROLLBAR
+========================== */
+
+
+::-webkit-scrollbar {
+
+
+  width:10px;
+
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+
+  background:#e2e8f0;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+  background:#94a3b8;
+
+  border-radius:20px;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+
+
+  background:#64748b;
+
+
+}
+
+
+
+
+
+/* ==========================
+ RESPONSIVO TABLET
+========================== */
+
+
+@media(max-width:1200px){
+
+
+.cards {
+
+
+  grid-template-columns:
+
+  repeat(2,1fr);
+
+
+}
+
+
+
+.sidebar {
+
+
+  width:230px;
+
+
+}
+
+
+
+.content {
+
+
+  margin-left:230px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* ==========================
+ RESPONSIVO MOBILE
+========================== */
+
+
+@media(max-width:768px){
+
+
+.layout {
+
+
+  flex-direction:column;
+
+
+}
+
+
+
+.sidebar {
+
+
+  position:relative;
+
+  width:100%;
+
+  min-height:auto;
+
+
+}
+
+
+
+.content {
+
+
+  margin-left:0;
+
+
+}
+
+
+
+.header {
+
+
+  height:auto;
+
+  padding:20px;
+
+  font-size:18px;
+
+
+}
+
+
+
+.cards {
+
+
+  grid-template-columns:1fr;
+
+
+}
+
+
+
+.dashboard,
+.page-container {
+
+
+  padding:20px;
+
+
+}
+
+
+
+form,
+.form-container {
+
+
+  padding:22px;
+
+
+}
+
+
+
+.table-container {
+
+
+  overflow-x:auto;
+
+
+}
+
+
+
+.login-box {
+
+
+  width:90%;
+
+  padding:30px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* ==========================
+ RESPONSIVO CELULAR PEQUENO
+========================== */
+
+
+@media(max-width:480px){
+
+
+.login-box {
+
+
+  width:95%;
+
+
+}
+
+
+
+.login-box h2 {
+
+
+  font-size:26px;
+
+
+}
+
+
+
+.card {
+
+
+  padding:20px;
+
+
+}
+
+
+
+.card svg {
+
+
+  width:45px;
+
+  height:45px;
+
+
+}
+
+
+
+.page-header {
+
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+  gap:15px;
+
+
+}
+
+
+
+button {
+
+
+  width:100%;
+
+
+}
+
+
+
+.form-actions {
+
+
+  flex-direction:column;
+
+
+}
+
+
+
+}
