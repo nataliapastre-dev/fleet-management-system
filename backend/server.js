@@ -7,7 +7,7 @@ import "./database/database.js";
 
 
 // ==============================
-// CONFIGURAÇÃO DO SERVIDOR
+// CONFIGURAÇÕES
 // ==============================
 
 const app = Fastify({
@@ -22,23 +22,15 @@ const app = Fastify({
 
 await app.register(cors, {
 
-  origin: [
-
-    "http://localhost:5173",
-
-    "https://nataliapastre-dev.github.io",
-
-  ],
+  origin: true,
 
   methods: [
-
     "GET",
     "POST",
     "PUT",
     "PATCH",
     "DELETE",
     "OPTIONS",
-
   ],
 
 });
@@ -55,17 +47,11 @@ import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 
 import vehicleRoutes from "./routes/vehicleRoutes.js";
-
 import serviceOrderRoutes from "./routes/serviceOrderRoutes.js";
-
 import dashboardRoutes from "./routes/dashboardRoutes.js";
-
 import driverRoutes from "./routes/driverRoutes.js";
-
 import contractRoutes from "./routes/contractRoutes.js";
-
 import maintenanceRoutes from "./routes/maintenanceRoutes.js";
-
 
 
 
@@ -78,18 +64,16 @@ app.get("/", async () => {
 
   return {
 
-    sistema: "Fleet Management System API",
+    mensagem: "🚗 Fleet Management System API",
 
-    status: "online",
+    status: "Servidor funcionando!",
 
     versao: "2.0.0",
-
-    ambiente: process.env.NODE_ENV || "development",
 
 
     modulos: [
 
-      "Autenticação JWT",
+      "Autenticação (JWT)",
 
       "Usuários",
 
@@ -105,8 +89,32 @@ app.get("/", async () => {
 
       "Dashboard",
 
+      "Relatórios",
+
     ],
 
+
+    endpoints: {
+
+      login: "/auth/login",
+
+      register: "/auth/register",
+
+      users: "/users",
+
+      vehicles: "/vehicles",
+
+      serviceOrders: "/service-orders",
+
+      drivers: "/drivers",
+
+      contracts: "/contracts",
+
+      maintenances: "/maintenances",
+
+      dashboard: "/dashboard",
+
+    },
 
   };
 
@@ -115,11 +123,9 @@ app.get("/", async () => {
 
 
 
-
 // ==============================
-// ROTAS
+// ROTAS DE AUTENTICAÇÃO
 // ==============================
-
 
 await app.register(authRoutes, {
 
@@ -128,6 +134,12 @@ await app.register(authRoutes, {
 });
 
 
+
+
+// ==============================
+// ROTAS DE USUÁRIOS
+// ==============================
+
 await app.register(userRoutes, {
 
   prefix: "/users",
@@ -135,23 +147,23 @@ await app.register(userRoutes, {
 });
 
 
-await app.register(vehicleRoutes);
 
+
+// ==============================
+// ROTAS DO SISTEMA
+// ==============================
+
+await app.register(vehicleRoutes);
 
 await app.register(serviceOrderRoutes);
 
-
 await app.register(driverRoutes);
-
 
 await app.register(contractRoutes);
 
-
 await app.register(maintenanceRoutes);
 
-
 await app.register(dashboardRoutes);
-
 
 
 
@@ -165,7 +177,7 @@ app.setNotFoundHandler(async (request, reply) => {
 
   return reply.status(404).send({
 
-    erro: "Endpoint não encontrado.",
+    erro: "Rota não encontrada.",
 
     metodo: request.method,
 
@@ -185,7 +197,6 @@ app.setNotFoundHandler(async (request, reply) => {
 
 app.setErrorHandler(async (error, request, reply) => {
 
-
   app.log.error(error);
 
 
@@ -197,7 +208,6 @@ app.setErrorHandler(async (error, request, reply) => {
 
   });
 
-
 });
 
 
@@ -205,13 +215,12 @@ app.setErrorHandler(async (error, request, reply) => {
 
 
 // ==============================
-// INICIALIZAÇÃO
+// INICIALIZAÇÃO DO SERVIDOR
 // ==============================
 
 const start = async () => {
 
   try {
-
 
     const PORT = process.env.PORT || 3333;
 
@@ -232,42 +241,38 @@ const start = async () => {
 
     console.log("=========================================");
 
-    console.log(`🌐 Porta: ${PORT}`);
+    console.log(`🌐 URL........: http://localhost:${PORT}`);
 
-    console.log("📦 Banco: SQLite");
+    console.log("📦 Banco......: SQLite");
 
-    console.log("🔐 Autenticação: JWT + Bcrypt");
+    console.log("🔐 Login......: JWT + Bcrypt");
 
-    console.log("👥 Usuários: OK");
+    console.log("👥 Usuários...: OK");
 
-    console.log("🚙 Veículos: OK");
+    console.log("🚙 Veículos...: OK");
 
-    console.log("📄 Contratos: OK");
+    console.log("📄 Contratos..: OK");
 
-    console.log("👤 Motoristas: OK");
+    console.log("👤 Motoristas.: OK");
 
-    console.log("🛠️ Manutenções: OK");
+    console.log("🛠️ Manutenção.: OK");
 
-    console.log("📋 Ordens de Serviço: OK");
+    console.log("📋 O.S........: OK");
 
-    console.log("📊 Dashboard: OK");
+    console.log("📊 Dashboard..: OK");
 
     console.log("=========================================");
 
 
-
   } catch(error) {
-
 
     app.log.error(error);
 
     process.exit(1);
 
-
   }
 
 };
-
 
 
 start();
