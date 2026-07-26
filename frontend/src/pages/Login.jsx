@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 
 
-
 function Login() {
 
 
@@ -56,8 +55,17 @@ function Login() {
 
 
       const response = await api.post(
-        "/auth/login",
-        form
+
+        "/login",
+
+        {
+
+          email: form.email,
+
+          password: form.password
+
+        }
+
       );
 
 
@@ -65,8 +73,11 @@ function Login() {
       // salva token JWT
 
       localStorage.setItem(
+
         "token",
+
         response.data.token
+
       );
 
 
@@ -74,8 +85,11 @@ function Login() {
       // salva usuário logado
 
       localStorage.setItem(
+
         "user",
+
         JSON.stringify(response.data.user)
+
       );
 
 
@@ -84,7 +98,7 @@ function Login() {
 
 
 
-    } catch(error) {
+    } catch (error) {
 
 
       console.error(error);
@@ -93,6 +107,7 @@ function Login() {
       setError(
 
         error.response?.data?.message ||
+
         "Erro ao realizar login."
 
       );
@@ -119,19 +134,28 @@ function Login() {
 
 
       <form
+
         className="login-box"
+
         onSubmit={handleSubmit}
+
       >
 
 
         <h2>
+
           FleetMS
+
         </h2>
 
 
+
         <p>
+
           Acesso ao sistema
+
         </p>
+
 
 
 
@@ -147,68 +171,100 @@ function Login() {
 
 
 
+
+
         <label>
+
           E-mail
+
         </label>
 
 
+
         <input
+
 
           type="email"
 
+
           name="email"
+
 
           value={form.email}
 
+
           onChange={handleChange}
+
 
           placeholder="admin@fleet.com"
 
+
           required
 
+
         />
+
 
 
 
 
 
         <label>
+
           Senha
+
         </label>
+
 
 
         <input
 
+
           type="password"
+
 
           name="password"
 
+
           value={form.password}
+
 
           onChange={handleChange}
 
+
           placeholder="123456"
+
 
           required
 
+
         />
+
 
 
 
 
 
         <button
+
           type="submit"
+
           disabled={loading}
+
         >
 
+
           {loading
+
             ? "Entrando..."
+
             : "Entrar"
+
           }
 
 
         </button>
+
 
 
 

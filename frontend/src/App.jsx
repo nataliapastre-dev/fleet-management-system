@@ -1,11 +1,12 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
 
-import Login from "./pages/Login";
 
+import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 
 
@@ -68,6 +69,7 @@ import "./App.css";
 
 
 
+
 function Layout() {
 
 
@@ -96,6 +98,12 @@ function Layout() {
           />
 
 
+          <Route
+            path="/dashboard"
+            element={<Dashboard />}
+          />
+
+
 
           {/* VEÍCULOS */}
 
@@ -115,8 +123,6 @@ function Layout() {
             path="/edit-vehicle/:id"
             element={<EditVehicle />}
           />
-
-
 
 
 
@@ -141,8 +147,6 @@ function Layout() {
 
 
 
-
-
           {/* CONTRATOS */}
 
           <Route
@@ -161,8 +165,6 @@ function Layout() {
             path="/edit-contract/:id"
             element={<EditContract />}
           />
-
-
 
 
 
@@ -187,9 +189,7 @@ function Layout() {
 
 
 
-
-
-          {/* ORDENS DE SERVIÇO */}
+          {/* ORDENS */}
 
           <Route
             path="/service-orders"
@@ -207,8 +207,6 @@ function Layout() {
             path="/edit-service-order/:id"
             element={<EditServiceOrder />}
           />
-
-
 
 
 
@@ -232,6 +230,17 @@ function Layout() {
           />
 
 
+
+          {/* QUALQUER ROTA INVÁLIDA */}
+
+          <Route
+            path="*"
+            element={
+              <Navigate to="/" replace />
+            }
+          />
+
+
         </Routes>
 
 
@@ -243,6 +252,7 @@ function Layout() {
   );
 
 }
+
 
 
 
@@ -264,7 +274,7 @@ function App() {
 
 
 
-      {/* SISTEMA PROTEGIDO */}
+      {/* SISTEMA */}
 
       <Route
 
