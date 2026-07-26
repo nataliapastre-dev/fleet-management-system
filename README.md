@@ -14,13 +14,33 @@ Sistema web completo para gerenciamento e controle de frotas
 
 ---
 
+# 🔐 Acesso para Demonstração
+
+<p align="center">
+  <img src="https://i.postimg.cc/tJJQMRgY/visitante.jpg" width="500"/>
+</p>
+
+Para testar a aplicação, utilize o usuário de demonstração:
+
+```
+Usuário: visitante
+
+Email: visitante@fleetmanagement.com
+
+Senha: Visitante@123
+```
+
+> Credenciais criadas exclusivamente para demonstração do funcionamento da aplicação.
+
+---
+
 # 📌 Sobre o Projeto
 
-O **Fleet Management System (FMS)** é uma aplicação web desenvolvida para gerenciamento de frotas corporativas, com foco em organização, controle operacional e visualização de informações estratégicas.
+O **Fleet Management System (FMS)** é uma aplicação web desenvolvida para gerenciamento e controle de frotas corporativas, com foco em organização, controle operacional e visualização de informações estratégicas.
 
 O projeto simula uma plataforma utilizada por empresas que precisam controlar seus veículos, motoristas, manutenções e processos relacionados à operação de uma frota.
 
-A aplicação foi criada com arquitetura **Full Stack**, separando o front-end e back-end, permitindo uma estrutura escalável e organizada.
+A aplicação foi desenvolvida utilizando arquitetura **Full Stack**, separando front-end e back-end, permitindo uma estrutura organizada, escalável e de fácil manutenção.
 
 Todos os dados apresentados no sistema, incluindo:
 
@@ -41,7 +61,7 @@ O objetivo foi desenvolver uma solução semelhante aos sistemas utilizados no m
 - Desenvolvimento Back-end;
 - Consumo de APIs REST;
 - Banco de dados;
-- Autenticação;
+- Autenticação de usuários;
 - Dashboard com indicadores;
 - Organização de processos empresariais.
 
@@ -97,7 +117,7 @@ Funcionalidades:
 - Associação de motoristas aos veículos;
 - Organização das informações dos condutores.
 
-*(Todos os motoristas cadastrados são fictícios.)*
+> Todos os motoristas cadastrados são fictícios.
 
 ---
 
@@ -141,6 +161,19 @@ Funcionalidades:
 
 ---
 
+## 👥 Gestão de Usuários
+
+Controle de acesso ao sistema.
+
+Funcionalidades:
+
+- Cadastro de usuários;
+- Login autenticado;
+- Controle de sessão;
+- Proteção de rotas através de autenticação JWT.
+
+---
+
 # 🛠️ Tecnologias Utilizadas
 
 ## Front-end
@@ -161,6 +194,7 @@ Funcionalidades:
 - Fastify
 - SQLite
 - JWT Authentication
+- Bcrypt
 - PDFKit
 
 ## Ferramentas
@@ -237,14 +271,16 @@ http://localhost:5173
 O sistema possui autenticação utilizando:
 
 - JWT;
+- Bcrypt para proteção de senhas;
 - Tokens de acesso;
-- Controle de rotas protegidas.
+- Rotas protegidas;
+- Controle de usuários.
 
 ---
 
 # 📈 Melhorias Futuras
 
-- [ ] Publicação do backend em ambiente cloud;
+- [ ] Publicação do back-end em ambiente cloud;
 - [ ] Banco de dados em produção;
 - [ ] Controle de abastecimentos;
 - [ ] Controle de pneus;
@@ -264,6 +300,7 @@ O sistema possui autenticação utilizando:
 💻 Desenvolvedora Front-end | Full Stack em formação
 
 GitHub:
+
 https://github.com/nataliapastre-dev
 
 ---
