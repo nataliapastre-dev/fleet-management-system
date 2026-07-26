@@ -11,8 +11,11 @@ import "./database/database.js";
 // ==============================
 
 const app = Fastify({
+
   logger: true,
+
 });
+
 
 
 
@@ -25,12 +28,14 @@ await app.register(cors, {
   origin: true,
 
   methods: [
+
     "GET",
     "POST",
     "PUT",
     "PATCH",
     "DELETE",
     "OPTIONS",
+
   ],
 
 });
@@ -62,13 +67,16 @@ import maintenanceRoutes from "./routes/maintenanceRoutes.js";
 
 app.get("/", async () => {
 
+
   return {
+
 
     mensagem: "🚗 Fleet Management System API",
 
     status: "Servidor funcionando!",
 
     versao: "2.0.0",
+
 
 
     modulos: [
@@ -94,7 +102,10 @@ app.get("/", async () => {
     ],
 
 
+
+
     endpoints: {
+
 
       login: "/auth/login",
 
@@ -114,11 +125,16 @@ app.get("/", async () => {
 
       dashboard: "/dashboard",
 
+
     },
+
 
   };
 
+
 });
+
+
 
 
 
@@ -136,6 +152,8 @@ await app.register(authRoutes, {
 
 
 
+
+
 // ==============================
 // ROTAS DE USUÁRIOS
 // ==============================
@@ -145,6 +163,8 @@ await app.register(userRoutes, {
   prefix: "/users",
 
 });
+
+
 
 
 
@@ -169,11 +189,29 @@ await app.register(dashboardRoutes);
 
 
 
+
+
+
 // ==============================
 // ROTA NÃO ENCONTRADA
 // ==============================
 
 app.setNotFoundHandler(async (request, reply) => {
+
+
+  console.log("==============================");
+
+  console.log("❌ ROTA NÃO ENCONTRADA");
+
+  console.log("MÉTODO:", request.method);
+
+  console.log("URL:", request.url);
+
+  console.log("HEADERS:", request.headers);
+
+  console.log("==============================");
+
+
 
   return reply.status(404).send({
 
@@ -185,7 +223,11 @@ app.setNotFoundHandler(async (request, reply) => {
 
   });
 
+
 });
+
+
+
 
 
 
@@ -197,7 +239,9 @@ app.setNotFoundHandler(async (request, reply) => {
 
 app.setErrorHandler(async (error, request, reply) => {
 
+
   app.log.error(error);
+
 
 
   return reply.status(error.statusCode || 500).send({
@@ -208,7 +252,11 @@ app.setErrorHandler(async (error, request, reply) => {
 
   });
 
+
 });
+
+
+
 
 
 
@@ -220,9 +268,12 @@ app.setErrorHandler(async (error, request, reply) => {
 
 const start = async () => {
 
+
   try {
 
+
     const PORT = process.env.PORT || 3333;
+
 
 
     await app.listen({
@@ -232,6 +283,8 @@ const start = async () => {
       host: "0.0.0.0",
 
     });
+
+
 
 
 
@@ -264,15 +317,20 @@ const start = async () => {
     console.log("=========================================");
 
 
+
   } catch(error) {
+
 
     app.log.error(error);
 
     process.exit(1);
 
+
   }
 
+
 };
+
 
 
 start();

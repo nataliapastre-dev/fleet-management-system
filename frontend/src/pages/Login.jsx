@@ -26,6 +26,7 @@ function Login() {
 
   function handleChange(e) {
 
+
     setForm({
 
       ...form,
@@ -34,6 +35,7 @@ function Login() {
 
     });
 
+
   }
 
 
@@ -41,6 +43,7 @@ function Login() {
 
 
   async function handleSubmit(e) {
+
 
     e.preventDefault();
 
@@ -56,7 +59,7 @@ function Login() {
 
       const response = await api.post(
 
-        "/login",
+        "/auth/login",
 
         {
 
@@ -70,7 +73,12 @@ function Login() {
 
 
 
-      // salva token JWT
+      console.log(
+        "LOGIN OK:",
+        response.data
+      );
+
+
 
       localStorage.setItem(
 
@@ -81,8 +89,6 @@ function Login() {
       );
 
 
-
-      // salva usuário logado
 
       localStorage.setItem(
 
@@ -101,16 +107,46 @@ function Login() {
     } catch (error) {
 
 
-      console.error(error);
+      console.error(
+
+        "ERRO LOGIN:",
+
+        error
+
+      );
+
+
+
+      console.log(
+
+        "STATUS:",
+
+        error.response?.status
+
+      );
+
+
+
+      console.log(
+
+        "RESPOSTA:",
+
+        error.response?.data
+
+      );
+
 
 
       setError(
 
         error.response?.data?.message ||
 
+        error.message ||
+
         "Erro ao realizar login."
 
       );
+
 
 
     } finally {
@@ -123,6 +159,8 @@ function Login() {
 
 
   }
+
+
 
 
 
@@ -159,6 +197,7 @@ function Login() {
 
 
 
+
         {error && (
 
           <div className="login-error">
@@ -168,6 +207,7 @@ function Login() {
           </div>
 
         )}
+
 
 
 
@@ -245,6 +285,7 @@ function Login() {
 
 
 
+
         <button
 
           type="submit"
@@ -263,6 +304,7 @@ function Login() {
           }
 
 
+
         </button>
 
 
@@ -278,6 +320,7 @@ function Login() {
 
 
 }
+
 
 
 export default Login;
