@@ -1,0 +1,11 @@
+# Dependências
+node_modules/
+
+# Variáveis de ambiente
+.env
+
+# Banco SQLite
+*.db
+
+# Logs
+*.log
