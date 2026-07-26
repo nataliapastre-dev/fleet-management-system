@@ -2,12 +2,15 @@ import {
   login,
   register,
   me,
+  testUsers,
 } from "../controllers/authController.js";
+
 
 import {
   auth,
   adminOnly,
 } from "../middleware/auth.js";
+
 
 
 // =====================================
@@ -16,6 +19,7 @@ import {
 // =====================================
 
 export default async function authRoutes(app) {
+
 
 
   // =====================================
@@ -37,6 +41,8 @@ export default async function authRoutes(app) {
 
 
 
+
+
   // =====================================
   // LOGIN
   // POST /auth/login
@@ -47,6 +53,8 @@ export default async function authRoutes(app) {
     "/login",
     login
   );
+
+
 
 
 
@@ -62,6 +70,22 @@ export default async function authRoutes(app) {
     },
     me
   );
+
+
+
+
+
+  // =====================================
+  // TESTE BANCO RENDER
+  // GET /auth/test-users
+  // REMOVER DEPOIS
+  // =====================================
+
+  app.get(
+    "/test-users",
+    testUsers
+  );
+
 
 
 }

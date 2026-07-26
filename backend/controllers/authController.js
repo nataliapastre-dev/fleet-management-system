@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 const JWT_SECRET = process.env.JWT_SECRET || "fleet_secret";
 
 
+
 // =====================================
 // CADASTRAR USUÁRIO
 // POST /auth/register
@@ -99,6 +100,7 @@ export async function register(request, reply) {
   }
 
 }
+
 
 
 
@@ -239,6 +241,7 @@ export async function login(request, reply) {
 
 
 
+
 // =====================================
 // USUÁRIO LOGADO
 // GET /auth/me
@@ -326,20 +329,54 @@ export async function me(request, reply){
 
 
 
-    if(error.name === "TokenExpiredError"){
-
-      return reply.status(401).send({
-        message:"Token expirado."
-      });
-
-    }
-
-
-
     return reply.status(401).send({
       message:"Token inválido ou expirado."
     });
 
+
+  }
+
+}
+
+
+
+
+
+// =====================================
+// TESTE BANCO RENDER
+// GET /auth/test-users
+// REMOVER DEPOIS
+// =====================================
+
+export async function testUsers(request, reply) {
+
+  try {
+
+    const users = db
+      .prepare(`
+        SELECT
+          id,
+          name,
+          email,
+          status
+        FROM users
+      `)
+      .all();
+
+
+    return reply.send(users);
+
+
+  } catch(error) {
+
+    console.error(error);
+
+
+    return reply.status(500).send({
+
+      message:"Erro ao consultar usuários."
+
+    });
 
   }
 
