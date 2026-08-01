@@ -23,11 +23,11 @@ Sistema web completo para gerenciamento e controle de frotas
 Para testar a aplicação, utilize o usuário de demonstração:
 
 ```
-Usuário: visitante
+Usuário: Administrador Demo
 
-Email: visitante@fleetmanagement.com
+Email: admin@fleet.com
 
-Senha: Visitante@123
+Senha: 123456
 ```
 
 > Credenciais criadas exclusivamente para demonstração do funcionamento da aplicação.
