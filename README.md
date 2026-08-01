@@ -16,7 +16,9 @@ Sistema web completo para gerenciamento e controle de frotas
 
 # 🔐 Acesso para Demonstração
 
-<img src="https://i.postimg.cc/QtQZ0md1/Gemini-Generated-Image-91bdoe91bdoe91bd.png" width="500"/>
+<p align="center">
+  <img src="https://i.postimg.cc/QtQZ0md1/Gemini-Generated-Image-91bdoe91bdoe91bd.png" width="300"/>
+</p>
 
 Para testar a aplicação, utilize o usuário de demonstração:
 
