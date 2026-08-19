@@ -310,4 +310,4 @@ https://github.com/nataliapastre-dev
 
 ---
 
-⭐ Projeto desenvolvido para estudos, portfólio e demonstração de habilidades em desenvolvimento de aplicações web.
+
