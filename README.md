@@ -36,20 +36,25 @@ Senha: 123456
 
 # 📌 Sobre o Projeto
 
-O **Fleet Management System (FMS)** é uma aplicação web desenvolvida para gerenciamento e controle de frotas corporativas, com foco em organização, controle operacional e visualização de informações estratégicas.
+O **Fleet Management System (FMS)** é uma aplicação web desenvolvida para o controle de frotas corporativas, com foco em organização operacional e visualização de dados estratégicos. A aplicação utiliza uma arquitetura **Full Stack**, garantindo uma estrutura organizada, escalável e de fácil manutenção.
 
-O projeto simula uma plataforma utilizada por empresas que precisam controlar seus veículos, motoristas, manutenções e processos relacionados à operação de uma frota.
+---
 
-A aplicação foi desenvolvida utilizando arquitetura **Full Stack**, separando front-end e back-end, permitindo uma estrutura organizada, escalável e de fácil manutenção.
+# 💡 Motivação e Aprendizado
 
-Todos os dados apresentados no sistema, incluindo:
+Este projeto nasceu da união entre meus estudos em Análise e Desenvolvimento de Sistemas e a minha experiência profissional prévia nas áreas de **manutenção de frotas e administrativa**.
 
-- 🚗 veículos cadastrados;
-- 👨‍✈️ motoristas cadastrados;
-- 📄 contratos;
-- 🔧 registros de manutenção;
+Ao atuar diretamente com a rotina operacional, identifiquei como a falta de processos automatizados pode gerar ineficiências. Desenvolvi este sistema para transformar essa vivência em uma solução tecnológica que otimiza o controle de veículos, motoristas e manutenções.
 
-são **dados fictícios criados exclusivamente para demonstração do funcionamento da aplicação**.
+### 🧗 Desafios Enfrentados
+* **Gestão de Estado:** Sincronizar dados entre front-end e back-end para garantir que o *dashboard* refletisse alterações em tempo real.
+* **Segurança:** Implementação de autenticação via JWT e proteção de rotas para garantir que dados sensíveis sejam acessados apenas por usuários autorizados.
+* **Integridade de Dados:** Modelagem do banco (SQLite) para manter o histórico preciso de manutenções e ordens de serviço.
+
+### 🏆 Resultados e Habilidades Adquiridas
+* **Visão Full Stack:** Domínio na comunicação entre cliente e servidor e consumo de APIs REST.
+* **Regras de Negócio:** Capacidade de traduzir processos reais de gestão em funcionalidades de software funcionais.
+* **Resolução de Problemas:** Execução de um fluxo completo, do banco de dados até a interface do usuário final, consolidando boas práticas de desenvolvimento.
 
 ---
 
