@@ -168,6 +168,74 @@ Cada veículo pode possuir informações como:
 - Chassi;
 - RENAVAM;
 - Quilometragem;
-- Combustível;
 - Câmbio;
 - Categoria.
+
+  ---
+
+- ## 👨‍✈️ Gestão de Motoristas
+
+Módulo responsável pelo **cadastro e gerenciamento dos condutores vinculados à frota**, permitindo organizar as informações dos motoristas e relacioná-los aos veículos da operação.
+
+### Funcionalidades
+
+- Cadastro de motoristas;
+- Edição e atualização de informações;
+- Associação de motoristas aos veículos;
+- Consulta dos dados dos condutores;
+- Organização das informações da equipe de motoristas.
+
+> ℹ️ Os motoristas cadastrados na aplicação são fictícios e utilizados exclusivamente para demonstração do sistema.
+
+---
+
+## 📄 Ordens de Serviço
+
+Módulo destinado ao **registro, acompanhamento e gerenciamento das solicitações de manutenção dos veículos**.
+
+A funcionalidade permite centralizar as informações relacionadas aos serviços realizados, facilitando o acompanhamento operacional e financeiro das manutenções.
+
+### Funcionalidades
+
+- Cadastro de ordens de serviço;
+- Identificação do tipo de manutenção;
+- Registro dos serviços realizados;
+- Registro das peças utilizadas;
+- Controle de valores de mão de obra;
+- Controle dos custos da manutenção;
+- Acompanhamento do status da ordem de serviço;
+- Associação da ordem ao veículo;
+- Geração da ordem de serviço em PDF.
+
+---
+
+## 🔧 Controle de Manutenções
+
+Módulo responsável pelo **registro e acompanhamento do histórico de manutenções realizadas nos veículos**.
+
+A funcionalidade permite consultar os serviços realizados e acompanhar informações relacionadas à manutenção e aos custos da frota.
+
+### Funcionalidades
+
+- Registro de manutenções;
+- Histórico de serviços por veículo;
+- Consulta do histórico de manutenção;
+- Controle de custos;
+- Acompanhamento dos serviços realizados;
+- Organização das informações de manutenção.
+
+---
+
+## 📑 Gestão de Contratos
+
+Módulo desenvolvido para **centralizar e organizar informações relacionadas aos contratos da operação de frota**.
+
+A funcionalidade permite manter os registros contratuais estruturados e facilitar sua consulta dentro do sistema.
+
+### Funcionalidades
+
+- Cadastro de contratos;
+- Edição e atualização de informações;
+- Organização dos dados contratuais;
+- Consulta dos registros;
+- Centralização das informações dos contratos.
