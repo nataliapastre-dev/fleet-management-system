@@ -20,6 +20,8 @@ Sistema web completo para gerenciamento e controle de frotas
 
 Este projeto possui uma **documentação técnica completa**, desenvolvida para registrar o contexto, a motivação, a arquitetura, as tecnologias utilizadas e a evolução do sistema durante seu desenvolvimento.
 
+
+
 📄 **[Acessar documentação completa do Fleet Management System](docs/Fleet-Management-Documentacao.pdf)**
 
 A documentação apresenta:
@@ -46,9 +48,12 @@ A documentação apresenta:
   <img src="https://i.postimg.cc/QtQZ0md1/Gemini-Generated-Image-91bdoe91bdoe91bd.png" width="300"/>
 </p>
 
-Para testar a aplicação, utilize o usuário de demonstração:
+Para testar a aplicação, utilize as credenciais de demonstração:
 
-```text
-Usuário: Administrador Demo
-Email: admin@fleet.com
-Senha: 123456
+**Usuário:** `Administrador Demo`  
+**Email:** `admin@fleet.com`  
+**Senha:** `123456`
+
+> 🔐 As credenciais foram criadas exclusivamente para demonstração do funcionamento da aplicação.
+
+
