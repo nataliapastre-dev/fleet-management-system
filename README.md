@@ -239,3 +239,61 @@ A funcionalidade permite manter os registros contratuais estruturados e facilita
 - Organização dos dados contratuais;
 - Consulta dos registros;
 - Centralização das informações dos contratos.
+
+  ---
+
+- ## 👥 Gestão de Usuários
+
+Módulo responsável pelo **gerenciamento de usuários e controle de acesso à aplicação**, garantindo que áreas protegidas do sistema sejam acessadas somente por usuários autenticados.
+
+### Funcionalidades
+
+- Cadastro de usuários;
+- Autenticação de acesso;
+- Login com credenciais;
+- Controle de sessão;
+- Proteção de rotas;
+- Geração e validação de tokens JWT;
+- Proteção de senhas utilizando Bcrypt.
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+O projeto foi desenvolvido utilizando uma arquitetura **Full Stack**, combinando tecnologias para construção da interface, desenvolvimento da API, persistência dos dados, autenticação e geração de documentos.
+
+## 💻 Front-end
+
+Responsável pela construção da interface e interação do usuário com o sistema.
+
+- **React** — biblioteca utilizada para construção da interface;
+- **Vite** — ferramenta de desenvolvimento e build;
+- **JavaScript** — linguagem principal do Front-end;
+- **HTML5** — estrutura das páginas;
+- **CSS3** — estilização e layout;
+- **React Router** — gerenciamento de rotas;
+- **Axios** — comunicação com a API;
+- **Recharts** — construção de gráficos e visualizações;
+- **React Icons** — utilização de ícones na interface.
+
+---
+
+## ⚙️ Back-end
+
+Responsável pelas regras de negócio, processamento das informações, autenticação e comunicação com o banco de dados.
+
+- **Node.js** — ambiente de execução do Back-end;
+- **Fastify** — framework utilizado para construção da API;
+- **SQLite** — banco de dados utilizado para persistência das informações;
+- **JWT (JSON Web Token)** — autenticação e controle de acesso;
+- **Bcrypt** — proteção e criptografia das senhas;
+- **PDFKit** — geração de documentos em PDF.
+
+---
+
+## 🧰 Ferramentas de Desenvolvimento
+
+- **Git** — versionamento do código;
+- **GitHub** — hospedagem do repositório e gerenciamento do projeto;
+- **Visual Studio Code** — ambiente de desenvolvimento;
+- **Insomnia** — testes e validação das APIs.
