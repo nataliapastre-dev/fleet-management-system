@@ -12,11 +12,7 @@
 
 </div>
 
-<p align="center">
-  <a href="https://nataliapastre-dev.github.io/fleet-management-system/">
-    🔗 Acessar aplicação online
-  </a>
-</p>
+
 
 ---
 
