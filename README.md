@@ -1,7 +1,7 @@
 # 🚚 Fleet Management System
 
 <p align="center">
-  <img src="https://i.postimg.cc/5yjGGR1W/fleet-management.png" width="800"/>
+  <img src="https://i.postimg.cc/5yjGGR1W/fleet-management.png" width="950"/>
 </p>
 
 <h3 align="center">
